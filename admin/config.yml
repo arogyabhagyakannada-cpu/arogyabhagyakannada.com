@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: arogyabhagyakannada-cpu/arogyabhagyakannada.com
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Articles"
+    folder: "_posts"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "select", options: ["Sugar Control Tips", "BP Control Tips", "Weight Loss Tips", "Diet Plans", "Home Remedies"]}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
